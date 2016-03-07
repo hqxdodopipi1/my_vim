@@ -378,6 +378,7 @@ let Tlist_Show_One_File = 1 "不同时显示多个文件的tag，只显示当前
 let Tlist_File_Fold_Auto_Close = 1
 let Tlist_Exit_OnlyWindow = 1 "如果taglist窗口是最后一个窗口，则退出vim 
 let Tlist_Use_Right_Window = 1 "在右侧窗口中显示taglist窗口
+
 " minibufexpl插件的一般设置
 let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapWindowNavArrows = 1
@@ -385,7 +386,7 @@ let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1  
 nmap tl :Tlist<cr>
 
-"python补全
+" python补全
 let g:pydiction_location = '~/.vim/after/complete-dict'
 let g:pydiction_menu_height = 20
 let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
@@ -435,7 +436,7 @@ let g:indentLine_char = '┊'
 Plugin 'L9'
 Plugin 'FuzzyFinder'
 " non github repos
-" Plugin 'git://git.wincent.com/command-t.git'
+Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'Auto-Pairs'
 Plugin 'python-imports.vim'
 Plugin 'CaptureClipboard'
@@ -455,9 +456,9 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 " ycm
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
-let g:ycm_confirm_extra_conf=0
-let g:ycm_collect_identifiers_from_tag_files = 1
+" let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
+" let g:ycm_confirm_extra_conf=0
+" let g:ycm_collect_identifiers_from_tag_files = 1
 
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
@@ -479,6 +480,7 @@ let NERDTreeIgnore=['\.pyc']
 ""vim-airline 
 let g:airline_section_b='%{strftime("%c")}' 
 let g:airline_section_y='BN: %{bufnr("%")}'
+" let g:airline_section_c='%{getcwd()}'
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#left_sep=' '
 let g:airline#extensions#tabline#left_alt_sep='|'
